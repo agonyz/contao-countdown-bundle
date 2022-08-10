@@ -1,0 +1,11 @@
+<div class="countdown-container">
+    <<?=$this->hl;?>><?=$this->headline;?></<?=$this->hl;?>>
+    <div id="countdown" data-countdown="<?=$this->countdown_date?>">
+        <ul>
+            <?php if($this->showDays):?><li><span class="days"></span>Tage</li><?php endif; ?>
+            <?php if($this->showHours):?><li><span class="hours"></span>Stunden</li><?php endif; ?>
+            <?php if($this->showMinutes):?><li><span class="minutes"></span>Minuten</li><?php endif; ?>
+            <?php if($this->showSeconds):?><li><span class="seconds"></span>Sekunden</li><?php endif; ?>
+        </ul>
+    </div>
+</div>

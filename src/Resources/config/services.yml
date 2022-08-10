@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autoconfigure: true
+
+    Agonyz\ContaoCountdownBundle\Controller\CountdownController:
+        tags:
+            -
+                name: contao.content_element
+                category: miscellaneous
+                template: ce_countdown
+                type: countdown

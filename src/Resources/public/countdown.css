@@ -1,0 +1,32 @@
+.countdown-container {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#countdown > ul > li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+#countdown > ul > li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+@media all and (max-width: 768px) {
+    #countdown > h1 {
+        font-size: calc(1.5rem * .75);
+    }
+
+    #countdown > ul > li {
+        font-size: calc(1.125rem * .75);
+    }
+
+    #countdown > ul > li span {
+        font-size: calc(3.375rem * .75);
+    }
+}
