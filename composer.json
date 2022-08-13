@@ -4,6 +4,13 @@
     "description": "Contao extension to add a simple countdown content element",
     "homepage": "https://github.com/agonyz/contao-countdown-bundle",
     "license": "LGPL-3.0-or-later",
+    "keywords": [
+        "contao",
+        "countdown",
+        "date",
+        "timer",
+        "content element"
+    ],
     "authors": [
         {
             "name": "agonyz",
