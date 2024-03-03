@@ -38,7 +38,7 @@ function initializeClock(id, endtime) {
     const secondsSpan = countdown.querySelector('.seconds');
 
     if(daysSpan) {
-       unitsToDisplay.push('days');
+        unitsToDisplay.push('days');
     }
     if(hoursSpan) {
         unitsToDisplay.push('hours');
@@ -53,25 +53,29 @@ function initializeClock(id, endtime) {
     function updateClock() {
         const t = getTimeRemaining(endtime, unitsToDisplay);
 
-        if(daysSpan) {
-            daysSpan.innerHTML = ('0' + t.days).slice(-2);
+        if (daysSpan) {
+            if (t.days < 100) {
+                daysSpan.innerHTML = ('0' + t.days).slice(-2);
+            } else {
+                daysSpan.innerHTML = t.days.toString();
+            }
         }
-        if(hoursSpan) {
-            if(t.hours < 100) {
+        if (hoursSpan) {
+            if (t.hours < 10) {
                 hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
             } else {
                 hoursSpan.innerHTML = t.hours.toString();
             }
         }
-        if(minutesSpan) {
-            if(t.minutes < 100) {
+        if (minutesSpan) {
+            if (t.minutes < 10) {
                 minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
             } else {
                 minutesSpan.innerHTML = t.minutes.toString();
             }
         }
-        if(secondsSpan) {
-            if(t.seconds < 100) {
+        if (secondsSpan) {
+            if (t.seconds < 10) {
                 secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
             } else {
                 secondsSpan.innerHTML = t.seconds.toString();

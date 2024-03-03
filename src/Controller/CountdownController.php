@@ -34,10 +34,10 @@ class CountdownController extends AbstractContentElementController
 
         $unitsToDisplay = unserialize($model->countdown_checkbox_display);
 
-        $template->showSeconds = isset($unitsToDisplay[0]);
-        $template->showMinutes = isset($unitsToDisplay[1]);
-        $template->showHours = isset($unitsToDisplay[2]);
-        $template->showDays = isset($unitsToDisplay[3]);
+        $template->showSeconds = in_array("1", $unitsToDisplay);
+        $template->showMinutes = in_array("2", $unitsToDisplay);
+        $template->showHours = in_array("3", $unitsToDisplay);
+        $template->showDays = in_array("4", $unitsToDisplay);
 
         return $template->getResponse();
     }
