@@ -54,7 +54,7 @@ function initializeClock(id, endtime) {
         const t = getTimeRemaining(endtime, unitsToDisplay);
 
         if (daysSpan) {
-            if (t.days < 100) {
+            if (t.days < 10) {
                 daysSpan.innerHTML = ('0' + t.days).slice(-2);
             } else {
                 daysSpan.innerHTML = t.days.toString();
