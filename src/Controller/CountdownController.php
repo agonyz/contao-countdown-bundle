@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of agonyz/contao-countdown-bundle.
  *
- * (c) 2022 agonyz
+ * (c) Frank Ficzak
  *
  * @license LGPL-3.0-or-later
  */
@@ -34,10 +34,10 @@ class CountdownController extends AbstractContentElementController
 
         $unitsToDisplay = unserialize($model->countdown_checkbox_display);
 
-        $template->showSeconds = is_array($unitsToDisplay) && in_array("1", $unitsToDisplay);
-        $template->showMinutes = is_array($unitsToDisplay) && in_array("2", $unitsToDisplay);
-        $template->showHours = is_array($unitsToDisplay) && in_array("3", $unitsToDisplay);
-        $template->showDays = is_array($unitsToDisplay) && in_array("4", $unitsToDisplay);
+        $template->showSeconds = \is_array($unitsToDisplay) && \in_array('1', $unitsToDisplay, true);
+        $template->showMinutes = \is_array($unitsToDisplay) && \in_array('2', $unitsToDisplay, true);
+        $template->showHours = \is_array($unitsToDisplay) && \in_array('3', $unitsToDisplay, true);
+        $template->showDays = \is_array($unitsToDisplay) && \in_array('4', $unitsToDisplay, true);
 
         return $template->getResponse();
     }

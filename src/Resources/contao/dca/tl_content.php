@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * This file is part of agonyz/contao-countdown-bundle.
  *
- * (c) 2022 agonyz
+ * (c) Frank Ficzak
  *
  * @license LGPL-3.0-or-later
  */
@@ -13,8 +13,7 @@ declare(strict_types=1);
 use Agonyz\ContaoCountdownBundle\Controller\CountdownController;
 
 $GLOBALS['TL_DCA']['tl_content']['palettes'][CountdownController::TYPE] =
-    '{type_legend},type;{countdown_legend},headline,countdown_date,countdown_checkbox_display,countdown_use_stylesheet,countdown_use_javascript;{template_legend:hide},customTpl;'
-;
+    '{type_legend},type;{countdown_legend},headline,countdown_date,countdown_checkbox_display,countdown_use_stylesheet,countdown_use_javascript;{template_legend:hide},customTpl;';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['countdown_date'] = [
     'exclude' => true,
